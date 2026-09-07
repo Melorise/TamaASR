@@ -85,6 +85,7 @@ stdenv.mkDerivation (finalAttrs: {
 
     cmake --install build/fcitx5
     makeWrapper ${electron}/bin/electron "$out/bin/tama-asr" \
+      --add-flags "--ozone-platform=x11" \
       --add-flags "$appDir"
 
     runHook postInstall
