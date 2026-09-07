@@ -4,7 +4,7 @@
 , nodejs
 , pnpm_11
 , pnpmConfigHook
-, electron
+, electron_42
 , cmake
 , pkg-config
 , makeWrapper
@@ -84,7 +84,7 @@ stdenv.mkDerivation (finalAttrs: {
       "$out/share/pixmaps/tama-asr.png"
 
     cmake --install build/fcitx5
-    makeWrapper ${electron}/bin/electron "$out/bin/tama-asr" \
+    makeWrapper ${electron_42}/bin/electron "$out/bin/tama-asr" \
       --add-flags "--ozone-platform=x11" \
       --add-flags "$appDir"
 
