@@ -21,6 +21,7 @@ export const qianwenAdapter: BackendWebAdapter = {
   isRecording(document) {
     const microphone = this.findMicrophone(document);
     return microphone?.getAttribute('aria-pressed') === 'true' ||
+      microphone?.classList.contains('bg-tag') === true ||
       /停止语音|stop\s*(voice|recording|input)/i.test(microphone ? controlDescription(microphone) : '');
   },
 

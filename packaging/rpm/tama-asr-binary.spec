@@ -38,6 +38,10 @@ tar -C %{buildroot} -xzf %{SOURCE0}
 /etc/xdg/autostart/tama-asr.desktop
 
 %changelog
+* Wed Oct 07 2026 TamaASR contributors - 1.0.3-1
+- 适配新版千问录音状态，修复松开快捷键后无法终止的问题。
+- Nix 启动参数与其他发行版保持一致，显式使用 XWayland。
+
 * Fri Sep 04 2026 TamaASR contributors - 1.0.2-1
 - 修复快速停止可能使网页录音状态与外部会话不同步的问题。
 
